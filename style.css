@@ -351,4 +351,14 @@ footer {
         padding: 10px 20px;
         font-size: 0.9rem;
     }
+        /* --- Alineación absoluta centrada para Quiénes Somos en Móvil --- */
+    .about-text {
+        text-align: center !important;
+    }
+    .about-text h2, 
+    .about-text p {
+        text-align: center !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
