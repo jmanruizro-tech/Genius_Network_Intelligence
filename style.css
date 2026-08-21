@@ -354,4 +354,14 @@ footer {
     .container {
         padding: 0 15px;
     }
+        /* --- Corrección de alineación de la tarjeta "100%" en móvil --- */
+    .about-card-mini {
+        margin: 20px auto 0 auto; /* 'auto' centra la tarjeta horizontalmente */
+        max-width: 280px;         /* Un ancho fijo para que se vea balanceada */
+    }
+    
+    /* Centrar también el texto de la sección Quiénes Somos en móvil */
+    .about-text {
+        text-align: center;
+    }
 }
