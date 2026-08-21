@@ -313,3 +313,45 @@ footer {
     font-size: 0.8rem;
     color: #475569;
 }
+/* --- OPTIMIZACIÓN PARA DISPOSITIVOS MÓVILES --- */
+@media (max-width: 768px) {
+    /* 1. Ajuste del Hero para que el texto no se corte */
+    .hero {
+        padding: 60px 15px;
+    }
+    .hero h1 {
+        font-size: 1.8rem; /* Título más pequeño */
+    }
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    /* 2. Navegación más compacta */
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul {
+        gap: 15px;
+        font-size: 0.85rem;
+    }
+
+    /* 3. Forzar que los Grids sean de una sola columna (vertical) */
+    .about-grid, .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+    
+    /* 4. Ajustar el Agente IA para que no rompa el diseño */
+    .ai-section {
+        padding: 40px 10px;
+    }
+    iframe {
+        height: 400px; /* Altura cómoda para iPhone */
+    }
+
+    /* 5. Asegurar que los textos no se peguen a los bordes */
+    .container {
+        padding: 0 15px;
+    }
+}
