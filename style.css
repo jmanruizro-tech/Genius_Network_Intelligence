@@ -77,11 +77,11 @@ nav ul li a:hover {
     background: #0369A1;
 }
 
-/* --- Sección Hero (Compacta y Profesional) --- */
+/* --- Sección Hero (Compacta) --- */
 .hero {
     position: relative;
     background: #0F172A; 
-    padding: 80px 20px; /* Padding reducido para tamaño compacto */
+    padding: 80px 20px;
     text-align: center;
     border-bottom: 1px solid #1E293B;
     overflow: hidden;
@@ -108,7 +108,7 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-    font-size: 2.5rem; /* Tamaño ajustado */
+    font-size: 2.5rem;
     color: #FFFFFF;
     margin-bottom: 10px;
     letter-spacing: -0.5px;
@@ -128,7 +128,6 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 
-/* --- Botones Principales --- */
 .btn-primary {
     display: inline-block;
     background: #0EA5E9;
@@ -187,7 +186,7 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-/* --- Sección de Servicios --- */
+/* --- Sección Servicios --- */
 .services-section {
     padding: 80px 20px;
     background-color: #0F172A;
@@ -239,6 +238,48 @@ nav ul li a:hover {
     margin: 0;
 }
 
+/* --- Sección Agente IA (Con Brillo) --- */
+.ai-section {
+    padding: 90px 20px;
+    background-color: #0B1120;
+    text-align: center;
+}
+
+.ai-section h2 {
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.ai-section p {
+    color: #94A3B8;
+    margin-bottom: 40px;
+}
+
+.ai-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #1E293B;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.ai-wrapper:hover {
+    border-color: #38BDF8;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3), 
+                0 0 40px rgba(56, 189, 248, 0.1);
+    transform: translateY(-2px);
+}
+
+iframe {
+    border-radius: 8px;
+    background: #0F172A;
+    display: block;
+}
+
 /* --- Sección CTA Final --- */
 .cta-section {
     padding: 60px 20px;
@@ -271,36 +312,4 @@ footer {
 .copyright {
     font-size: 0.8rem;
     color: #475569;
-}
-/* Estilos para la sección del Agente IA */
-.ai-section {
-    padding: 90px 20px;
-    background-color: #0B1120; /* Mantiene la consistencia del color */
-    text-align: center;
-}
-
-.ai-section h2 {
-    color: #FFFFFF;
-    margin-bottom: 10px;
-    font-size: 2rem;
-}
-
-.ai-section p {
-    color: #94A3B8;
-    margin-bottom: 40px;
-}
-
-.ai-wrapper {
-    max-width: 900px;
-    margin: 0 auto;
-    background: #1E293B; /* Marco oscuro */
-    padding: 10px;
-    border-radius: 12px;
-    border: 1px solid #334155;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-iframe {
-    border-radius: 8px; /* Bordes suaves para el agente */
-    background: #0F172A;
 }
