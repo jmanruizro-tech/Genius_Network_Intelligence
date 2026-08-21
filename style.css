@@ -272,3 +272,35 @@ footer {
     font-size: 0.8rem;
     color: #475569;
 }
+/* Estilos para la sección del Agente IA */
+.ai-section {
+    padding: 90px 20px;
+    background-color: #0B1120; /* Mantiene la consistencia del color */
+    text-align: center;
+}
+
+.ai-section h2 {
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.ai-section p {
+    color: #94A3B8;
+    margin-bottom: 40px;
+}
+
+.ai-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #1E293B; /* Marco oscuro */
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+iframe {
+    border-radius: 8px; /* Bordes suaves para el agente */
+    background: #0F172A;
+}
