@@ -77,7 +77,7 @@ nav ul li a:hover {
     background: #0369A1;
 }
 
-/* --- Sección Hero (Compacta) --- */
+/* --- Sección Hero --- */
 .hero {
     position: relative;
     background: #0F172A; 
@@ -238,7 +238,7 @@ nav ul li a:hover {
     margin: 0;
 }
 
-/* --- Sección Agente IA (Con Brillo) --- */
+/* --- Sección Agente IA --- */
 .ai-section {
     padding: 90px 20px;
     background-color: #0B1120;
@@ -313,55 +313,42 @@ footer {
     font-size: 0.8rem;
     color: #475569;
 }
-/* --- OPTIMIZACIÓN PARA DISPOSITIVOS MÓVILES --- */
-@media (max-width: 768px) {
-    /* 1. Ajuste del Hero para que el texto no se corte */
-    .hero {
-        padding: 60px 15px;
-    }
-    .hero h1 {
-        font-size: 1.8rem; /* Título más pequeño */
-    }
-    .hero-subtitle {
-        font-size: 0.95rem;
-    }
 
-    /* 2. Navegación más compacta */
+/* --- OPTIMIZACIÓN FINAL PARA MÓVIL --- */
+@media (max-width: 768px) {
+    .about-section, .services-section, .ai-section, .cta-section {
+        padding: 50px 15px !important; 
+    }
     nav {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
+        padding: 15px 10px;
     }
     nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 15px;
-        font-size: 0.85rem;
     }
-
-    /* 3. Forzar que los Grids sean de una sola columna (vertical) */
-    .about-grid, .services-grid {
-        grid-template-columns: 1fr !important;
-        gap: 20px;
+    h2 {
+        font-size: 1.5rem !important;
+        margin-bottom: 25px !important;
     }
-    
-    /* 4. Ajustar el Agente IA para que no rompa el diseño */
-    .ai-section {
-        padding: 40px 10px;
-    }
-    iframe {
-        height: 400px; /* Altura cómoda para iPhone */
-    }
-
-    /* 5. Asegurar que los textos no se peguen a los bordes */
-    .container {
-        padding: 0 15px;
-    }
-        /* --- Corrección de alineación de la tarjeta "100%" en móvil --- */
     .about-card-mini {
-        margin: 20px auto 0 auto; /* 'auto' centra la tarjeta horizontalmente */
-        max-width: 280px;         /* Un ancho fijo para que se vea balanceada */
+        margin: 20px auto 0 auto;
+        max-width: 280px;
     }
-    
-    /* Centrar también el texto de la sección Quiénes Somos en móvil */
     .about-text {
         text-align: center;
+    }
+    .ai-wrapper {
+        padding: 5px;
+        margin-top: 15px;
+    }
+    iframe {
+        height: 350px !important;
+    }
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 }
