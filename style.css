@@ -333,12 +333,28 @@ footer {
         font-size: 1.5rem !important;
         margin-bottom: 25px !important;
     }
+    
+    /* Solución definitiva centrada para Quiénes Somos en Móvil */
+    .about-section .about-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .about-section .about-text {
+        width: 100%;
+        text-align: center !important;
+    }
+    .about-section .about-text h2 {
+        text-align: center !important;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
     .about-card-mini {
         margin: 20px auto 0 auto;
         max-width: 280px;
-    }
-    .about-text {
-        text-align: center;
     }
     .ai-wrapper {
         padding: 5px;
@@ -350,15 +366,5 @@ footer {
     .btn-primary {
         padding: 10px 20px;
         font-size: 0.9rem;
-    }
-        /* --- Alineación absoluta centrada para Quiénes Somos en Móvil --- */
-    .about-text {
-        text-align: center !important;
-    }
-    .about-text h2, 
-    .about-text p {
-        text-align: center !important;
-        margin-left: auto;
-        margin-right: auto;
     }
 }
