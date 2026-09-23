@@ -7,7 +7,6 @@
     <!-- Meta tags para redes sociales (Open Graph) -->
     <meta property="og:title" content="GENIUS NETWORK INTELLIGENCE | IA y Automatización">
     <meta property="og:description" content="Transformamos la complejidad operativa en activos estratégicos. Consultoría experta en CRM, IA y automatización.">
-    <!-- Ajustado con tu URL real de GitHub Pages -->
     <meta property="og:image" content="https://jmanruizro-tech.github.io/Genius_Network_Intelligence/logo-gni.png">
     <meta property="og:url" content="https://jmanruizro-tech.github.io/Genius_Network_Intelligence/">
     <meta property="og:type" content="website">
@@ -42,7 +41,7 @@
             <h1>GENIUS NETWORK INTELLIGENCE</h1>
             <p class="hero-subtitle">Transformamos la complejidad operativa en activos estratégicos.</p>
             <p class="hero-quote">"Impulsar la evolución digital mediante la creación de ecosistemas inteligentes que optimicen la interacción entre humanos, datos y tecnología."</p>
-            <a href="https://forms.gle/PjaEM6rLQzzkbZXj6" target="_blank" class="btn-primary">Agenda tu Diagnóstico Estratégico</a>
+            <button onclick="openModal()" class="btn-primary">Agenda tu Diagnóstico Estratégico</button>
         </div>
     </section>
 
@@ -85,42 +84,106 @@
                     <p>Auditoría y rediseño de procesos corporativos. Ayudamos a las empresas a escalar mediante el uso de herramientas tecnológicas avanzadas y análisis predictivo.</p>
                 </div>
 
+                <div class="card">
+                    <div class="card-icon">🌐</div>
+                    <h3>Arquitectura y Diseño Web Avanzado</h3>
+                    <p>Conceptualización, diseño y modernización integral de plataformas web de alto rendimiento. Creamos interfaces sofisticadas, responsivas y optimizadas para potenciar la conversión digital y presencia de marca.</p>
+                </div>
+
             </div>
         </div>
     </section>
-<!-- Sección Agente IA -->
-<section id="agente-ia" class="ai-section">
-    <div class="container">
-        <h2>Asistente Inteligente GNI@</h2>
-        <p>Interactúa con nuestro agente especializado en IA y automatización.</p>
-        <div class="ai-wrapper">
-            <iframe 
-                src="https://agente-gni-uxtmwjguvh88nsommfmy4y.streamlit.app/?embed=true" 
-                title="GNI AI Agent"
-                width="100%" 
-                height="600" 
-                frameborder="0">
-            </iframe>
+
+    <!-- Sección Agente IA -->
+    <section id="agente-ia" class="ai-section">
+        <div class="container">
+            <h2>Asistente Inteligente GNI@</h2>
+            <p>Interactúa con nuestro agente especializado en IA y automatización.</p>
+            <div class="ai-wrapper">
+                <iframe 
+                    src="https://agente-gni-uxtmwjguvh88nsommfmy4y.streamlit.app/?embed=true" 
+                    title="GNI AI Agent"
+                    width="100%" 
+                    height="600" 
+                    frameborder="0">
+                </iframe>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
     <!-- Sección de Contacto / Cierre -->
     <section id="contacto" class="cta-section">
         <div class="container">
             <h2>Empecemos a Optimizar tu Negocio</h2>
             <p>¿Listo para llevar la eficiencia de tu organización al siguiente nivel? Conversemos sobre tus desafíos operativos.</p>
-            <a href="https://forms.gle/PjaEM6rLQzzkbZXj6" target="_blank" class="btn-primary">Agenda tu Diagnóstico Estratégico</a>
+            <button onclick="openModal()" class="btn-primary">Agenda tu Diagnóstico Estratégico</button>
         </div>
     </section>
 
     <!-- Pie de Página -->
     <footer>
         <div class="container footer-content">
-            <p><strong>Contacto:</strong> manuel.ruiz@geniusnetworki.com &nbsp;|&nbsp; <strong>Ubicación:</strong> CDMX &nbsp;|&nbsp; <strong>Cel:</strong> 5529891717</p>
+            <p><strong>Contacto:</strong> jmruizr@icloud.com &nbsp;|&nbsp; <strong>Ubicación:</strong> CDMX &nbsp;|&nbsp; <strong>Cel:</strong> 5529891717</p>
             <p class="copyright">&copy; 2026 GENIUS NETWORK INTELLIGENCE. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <!-- Script para animar la red neuronal -->
+
+    <!-- MODAL DE DIAGNÓSTICO Y CATÁLOGO DE SERVICIOS -->
+    <div id="diagnosticModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h2>Agenda tu Diagnóstico Estratégico</h2>
+            <p class="modal-subtitle">Selecciona el servicio de tu interés y completa tus datos para agendar vía WhatsApp.</p>
+            
+            <form id="diagnosticForm" onsubmit="sendToWhatsApp(event)">
+                <div class="form-group">
+                    <label>Selecciona el Servicio:</label>
+                    <div class="services-catalog-select">
+                        <label class="catalog-option">
+                            <input type="checkbox" name="service" value="Optimización de CRM">
+                            <span>📊 Optimización de CRM</span>
+                        </label>
+                        <label class="catalog-option">
+                            <input type="checkbox" name="service" value="Automatización Inteligente">
+                            <span>🤖 Automatización Inteligente</span>
+                        </label>
+                        <label class="catalog-option">
+                            <input type="checkbox" name="service" value="Consultoría de Operaciones">
+                            <span>⚙️ Consultoría de Operaciones</span>
+                        </label>
+                        <label class="catalog-option">
+                            <input type="checkbox" name="service" value="Arquitectura y Diseño Web Avanzado">
+                            <span>🌐 Arquitectura y Diseño Web Avanzado</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="userName">Nombre Completo:</label>
+                    <input type="text" id="userName" required placeholder="Tu nombre">
+                </div>
+
+                <div class="form-group">
+                    <label for="userEmail">Correo Electrónico:</label>
+                    <input type="email" id="userEmail" required placeholder="tucorreo@empresa.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="userPhone">Celular / Teléfono:</label>
+                    <input type="tel" id="userPhone" required placeholder="55 1234 5678">
+                </div>
+
+                <div class="form-group">
+                    <label for="userComments">Comentarios o Requerimientos:</label>
+                    <textarea id="userComments" rows="3" placeholder="Cuéntanos brevemente sobre tu proyecto o necesidades..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-whatsapp">Enviar solicitud por WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Script para animar la red neuronal y manejar el modal -->
     <script>
         const canvas = document.getElementById('neural-net');
         const ctx = canvas.getContext('2d');
@@ -151,7 +214,7 @@
                 if (this.y > canvas.height || this.y < 0) this.speedY = -this.speedY;
             }
             draw() {
-                ctx.fillStyle = 'rgba(56, 189, 248, 0.7)'; // Color cian tecnológico
+                ctx.fillStyle = 'rgba(56, 189, 248, 0.7)';
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.fill();
@@ -197,6 +260,55 @@
 
         initParticles();
         animate();
+
+        // Funciones del Modal y WhatsApp
+        function openModal() {
+            document.getElementById('diagnosticModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('diagnosticModal').style.display = 'none';
+        }
+
+        // Cerrar modal al hacer clic fuera del contenido
+        window.onclick = function(event) {
+            let modal = document.getElementById('diagnosticModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('userName').value.trim();
+            const email = document.getElementById('userEmail').value.trim();
+            const phone = document.getElementById('userPhone').value.trim();
+            const comments = document.getElementById('userComments').value.trim();
+            
+            const checkboxes = document.querySelectorAll('input[name="service"]:checked');
+            let selectedServices = [];
+            checkboxes.forEach((cb) => {
+                selectedServices.push(cb.value);
+            });
+            
+            if (selectedServices.length === 0) {
+                alert('Por favor selecciona al menos un servicio de interés.');
+                return;
+            }
+
+            let message = `Hola, me interesa agendar un Diagnóstico Estratégico en GENIUS NETWORK INTELLIGENCE.%0A%0A` +
+                          `*Servicios de Interés:*%0A- ${selectedServices.join('%0A- ')}%0A%0A` +
+                          `*Datos de Contacto:*%0A` +
+                          `- *Nombre:* ${name}%0A` +
+                          `- *Email:* ${email}%0A` +
+                          `- *Celular:* ${phone}%0A` +
+                          `- *Comentarios:* ${comments || 'Ninguno'}`;
+
+            const whatsappUrl = `https://wa.me/5215529891717?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+            closeModal();
+        }
     </script>
 </body>
 </html>
