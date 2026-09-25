@@ -467,7 +467,32 @@ footer {
     transform: translateY(-1px);
     box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6);
 }
+/* --- Sección Newsletter (SendPulse) --- */
+.newsletter-section {
+    padding: 60px 20px;
+    background-color: #0B1120;
+    text-align: center;
+    border-top: 1px solid #1E293B;
+}
 
+.newsletter-section h2 {
+    font-size: 1.8rem;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.newsletter-section p {
+    color: #94A3B8;
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+.sendpulse-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
 /* --- OPTIMIZACIÓN PARA MÓVIL --- */
 @media (max-width: 768px) {
     .about-section, .services-section, .ai-section, .cta-section {
